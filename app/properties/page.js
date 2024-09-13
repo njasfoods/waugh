@@ -1,14 +1,14 @@
-import PropertyContainer from '@/components/Container'
+
 import Navbar from '@/components/layout/Navbar'
+import PropertyContainer from '@/components/Properties/PropertyContainer'
 import React from 'react'
 
 const Properties = () => {
   return (
    <main>
-    <Navbar location={'properties'}/>
-    <section>
+   
       <PropertyContainer/>
-    </section>
+  
    </main>
   )
 }
