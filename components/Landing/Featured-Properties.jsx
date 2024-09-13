@@ -8,39 +8,7 @@ import { useRouter } from 'next/navigation'
 import { getCollection } from '@/lib/CRUD/readCollection'
 
 // Sample data for featured properties
-const featuredProperties = [
-  {
-    id: 1,
-    title: "Luxury Beachfront Villa",
-    location: "Malibu, CA",
-    type: "short-term",
-    price: "$500/night",
-    bedrooms: 4,
-    bathrooms: 3,
-    image: "https://ik5bpxjwqxp7ckzx.public.blob.vercel-storage.com/luxury-beachfront-villa-4dKM9x.jpg"
-  },
-  {
-    id: 2,
-    title: "Modern Downtown Apartment",
-    location: "New York, NY",
-    type: "long-term",
-    price: "$3,500/month",
-    bedrooms: 2,
-    bathrooms: 2,
-    image: "https://ik5bpxjwqxp7ckzx.public.blob.vercel-storage.com/modern-downtown-apartment-8fGH7y.jpg"
-  },
-  {
-    id: 3,
-    title: "Cozy Mountain Cabin",
-    location: "Aspen, CO",
-    type: "short-term",
-    price: "$300/night",
-    bedrooms: 3,
-    bathrooms: 2,
-    image: "https://ik5bpxjwqxp7ckzx.public.blob.vercel-storage.com/cozy-mountain-cabin-2jKL9z.jpg"
-  },
- 
-]
+
 
 export default function FeaturedProperties() {
   const [selectedType, setSelectedType] = useState("all")

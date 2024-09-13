@@ -5,7 +5,7 @@ import React from 'react'
 
 const Properties = () => {
   return (
-   <main>
+   <main className="mt-[11vh]">
    
       <PropertyContainer/>
   

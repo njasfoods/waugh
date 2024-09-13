@@ -6,8 +6,11 @@ const nextConfig = {
           use: [
             {
               loader: '@svgr/webpack',
-            
+              options: {
+                // You can add options here if needed
+              },
             },
+            'url-loader',
           ],
         });
     

@@ -5,11 +5,13 @@ import { Input } from "@/components/ui/input"
 import { Search, Globe, Menu, User } from 'lucide-react'
 import Logo from '../ui/Logo'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [showSearchBar, setShowSearchBar] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
+    const page = usePathname()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -36,7 +38,7 @@ export default function Navbar() {
         };
       }, []);
   return (
-    <nav className={`bg-white shadow-md fixed top-0 w-full z-40 ${!isScrolled && 'hidden'}`}>
+    <nav className={`bg-white shadow-md fixed top-0 w-full z-40 ${!isScrolled && page ==='/' && 'hidden'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
