@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import { useForm } from "react-hook-form"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { User, Mail, Phone, CheckCircle, ArrowLeft } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { motion } from "framer-motion"
-import BackButton from "@/components/UI/BackButton"
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { User, Mail, Phone, CheckCircle, ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import BackButton from "@/components/ui/BackButton";
 
 export default function OwnerInfoPage() {
-  const router = useRouter()
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data) // You would typically send this to your backend
-    router.push("/get-started/congratulations")
-  }
+    console.log(data); // You would typically send this to your backend
+    router.push("/get-started/congratulations");
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-     <BackButton/>
+        <BackButton />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div
@@ -39,7 +39,8 @@ export default function OwnerInfoPage() {
               Join Our Community of Property Owners
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Simplify your property management and maximize your rental income with our premium services.
+              Simplify your property management and maximize your rental income
+              with our premium services.
             </p>
             <ul className="space-y-4">
               {[
@@ -48,8 +49,8 @@ export default function OwnerInfoPage() {
                 "Automated rent collection and financial reporting",
                 "Regular property inspections and updates",
               ].map((feature, index) => (
-                <motion.li 
-                  key={index} 
+                <motion.li
+                  key={index}
                   className="flex items-center space-x-3 text-gray-700"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -60,7 +61,6 @@ export default function OwnerInfoPage() {
                 </motion.li>
               ))}
             </ul>
-          
           </motion.div>
 
           <motion.div
@@ -69,10 +69,17 @@ export default function OwnerInfoPage() {
             transition={{ duration: 0.5 }}
             className="bg-white p-8 rounded-2xl shadow-xl"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Get Started</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Get Started
+            </h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <Label htmlFor="name" className="text-sm font-medium text-gray-700">Full Name</Label>
+                <Label
+                  htmlFor="name"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Full Name
+                </Label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <User className="h-5 w-5 text-gray-400" />
@@ -84,11 +91,20 @@ export default function OwnerInfoPage() {
                     placeholder="John Doe"
                   />
                 </div>
-                {errors.name && <p className="mt-2 text-sm text-red-600">{errors.name.message}</p>}
+                {errors.name && (
+                  <p className="mt-2 text-sm text-red-600">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email</Label>
+                <Label
+                  htmlFor="email"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Email
+                </Label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
@@ -107,11 +123,20 @@ export default function OwnerInfoPage() {
                     placeholder="you@example.com"
                   />
                 </div>
-                {errors.email && <p className="mt-2 text-sm text-red-600">{errors.email.message}</p>}
+                {errors.email && (
+                  <p className="mt-2 text-sm text-red-600">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
               <div>
-                <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</Label>
+                <Label
+                  htmlFor="phone"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </Label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Phone className="h-5 w-5 text-gray-400" />
@@ -130,11 +155,15 @@ export default function OwnerInfoPage() {
                     placeholder="(123) 456-7890"
                   />
                 </div>
-                {errors.phone && <p className="mt-2 text-sm text-red-600">{errors.phone.message}</p>}
+                {errors.phone && (
+                  <p className="mt-2 text-sm text-red-600">
+                    {errors.phone.message}
+                  </p>
+                )}
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
               >
                 Get Started
@@ -146,7 +175,10 @@ export default function OwnerInfoPage() {
                 Terms of Service
               </Link>{" "}
               and{" "}
-              <Link href="/privacy" className="text-primary hover:text-rose-800">
+              <Link
+                href="/privacy"
+                className="text-primary hover:text-rose-800"
+              >
                 Privacy Policy
               </Link>
               .
@@ -155,5 +187,5 @@ export default function OwnerInfoPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

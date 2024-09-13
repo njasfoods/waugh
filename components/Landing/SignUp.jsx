@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, Home } from 'lucide-react';
-import { Button } from '../UI/button';
+import { Button } from '../ui/button';
 
 const SignUp = () => {
   const signUpOptions = [

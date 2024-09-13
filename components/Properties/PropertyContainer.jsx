@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Search, MapPin, Filter, Star, Heart } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '../UI/Logo'
+import Logo from '../ui/Logo'
 
 const properties = [
   {
@@ -103,7 +103,7 @@ export default function PropertyContainer() {
                 <Input
                   type="text"
                   placeholder="Search destinations"
-                  className="flex-grow bg-transparent border-none focus:ring-0"
+                  className="w-full px-4 bg-transparent py-2 border-none focus:ring-0 focus:outline-none focus:border-b-2 border-gray-300 focus:border-primary transition-colors duration-300"
                 />
                 <Button size="sm" className="ml-2 rounded-full bg-primary text-white hover:bg-primary-dark">
                   <Search className="h-4 w-4" />

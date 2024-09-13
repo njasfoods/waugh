@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { FaCheckCircle } from 'react-icons/fa';
+import { CircleCheck } from 'lucide-react';
 
 const Confirmation = () => {
   const router = useRouter();
@@ -14,7 +14,7 @@ const Confirmation = () => {
     <div className="flex flex-col items-center justify-center w-full min-h-screen bg-slate-100 px-4">
       <div className="bg-= p-6 ">
         <div className='flex space-x-4 items-center'>
-             <FaCheckCircle className="text-primary text-Xl sm:text-2xl lg:text-3xl  " />
+             <CircleCheck className="text-primary" size={48} />
             <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl">
             Congratulations!
             </h2>

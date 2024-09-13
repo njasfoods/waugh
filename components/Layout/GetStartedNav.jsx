@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Search, Globe, Menu, User } from 'lucide-react'
-import Logo from '../UI/Logo'
+import Logo from '../ui/Logo'
 import Link from 'next/link'
 
 export default function GetStartedNav() {
