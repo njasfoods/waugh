@@ -1,19 +1,16 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Search, MapPin, Filter, Star, Heart, Bed, Bath, Calendar } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
-import Logo from '../ui/Logo'
 import Navbar from '../Layout/Navbar'
 import { getCollection } from '@/lib/CRUD/readCollection'
-import { Badge } from '../ui/badge'
 import { Card, CardContent } from '../ui/card'
+import { Badge } from '../ui/badge'
 
 
 
