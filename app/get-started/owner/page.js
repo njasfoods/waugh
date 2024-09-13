@@ -1,15 +1,15 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { Button } from "../../ui/button";
-import { Input } from "../../ui/input";
-import { Label } from "../../ui/label";
+import { Button } from "../../../components/ui/button";
+import { Input } from "../../../components/ui/input";
+import { Label } from "../../../components/ui/label";
 import { User, Mail, Phone, CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import BackButton from "../../ui/BackButton";
+import BackButton from "../../../components/ui/BackButton";
 
 export default function OwnerInfoPage() {
   const router = useRouter();

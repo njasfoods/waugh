@@ -4,7 +4,7 @@ const Logo = ({width,height,color}) => {
       xmlns="http://www.w3.org/2000/svg" 
       xmlnsXlink="http://www.w3.org/1999/xlink" 
       viewBox="0 0 2674.44 1578.53"
-      className={`text-secondary w-[${width}] h-[${height}]`} // Set width and height
+      style={{ width, height }}
       fill={color}
     >
       <g>
